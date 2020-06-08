@@ -8,3 +8,8 @@ Do you know that a single command can erase your entire memory?
 ```bash
 rm -rf /*
 ```
+
+Please don't try this at home. I mean not at your home directory. It is injurious to your PC.
+
+Please join me into the journey of commands where you can rule the linux world.
+* * *
