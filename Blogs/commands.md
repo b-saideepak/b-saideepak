@@ -31,4 +31,4 @@ $ man cp
 ```
 to get the details of any command in linux.
 
-[Go back to Blogs](Blogs.md)
+[Go back to Blogs](../Blogs.md)
