@@ -1,9 +1,9 @@
 
-1. ## [Github Pages](/Blogs/pages.md)
+## [Github Pages](/Blogs/pages.md)
 
 It is now very easy to setup your blog and start writing.
 
-2. ## [Linux Commands](/Blogs/commands.md)
+## [Linux Commands](/Blogs/commands.md)
 
 Know the power of Linux.
 
