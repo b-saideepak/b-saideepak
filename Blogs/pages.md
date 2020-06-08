@@ -9,3 +9,5 @@ I will take through a quick process how to create one.
 * Click on settings tab and scroll down untill you find an option for github pages there you can choose the option to launch the pages at your master branch. Note that there are other places that you can launch the pages like gh-pages, /doc. We are going to simply launch at the master branch.
 * Below this, you can also choose a theme for your github page. There are several themes you can select the theme which you like the most.
 * Then goto the url: https://user-name.github.io and there you go your github page is live.
+* * *
+> There is a lot that you can do to edit your page now. Meanwhile I will keep updating this page whenever I find any useful information. Note that I just started my blog today. 08-06-2020
