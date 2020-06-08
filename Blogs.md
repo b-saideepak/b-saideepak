@@ -1,1 +1,1 @@
-1. [Github Pages](pages.md)
+1. [Github Pages](/Blog/pages.md)
