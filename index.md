@@ -8,6 +8,8 @@ As a CS guy you might have to learn many tools like git, linux, programming, sim
 
 Check out the blogs section.
 
-[Look-Here](Bio.md) for a brief bio. <br>
-[Projects](Project.md)<br>
+[Look-Here](Bio.md) for a brief bio.
+
+[Projects](Project.md){: .btn}
+
 [Blogs](Blogs.md)
