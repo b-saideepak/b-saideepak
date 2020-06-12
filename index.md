@@ -13,3 +13,5 @@ Check out the blogs section.
 [Projects](Project.md){: .btn}
 
 [Blogs](Blogs.md)
+
+<button name="button">Click me</button>
