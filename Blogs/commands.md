@@ -30,5 +30,17 @@ you can always use `man`
 $ man cp
 ```
 to get the details of any command in linux.
-
-[Go back to Blogs](../Blogs.md)
+## cat command
+```bash
+$ cat file
+```
+`cat` command displays the content of the file. 
+```bash
+$ cat > file
+```
+To write to the file using cat
+```bash
+$ cp file1 > file2
+```
+To copy the content from file1 to file2. Note that the contents of file2 will be overwritten. If you want to append use `>>`
+[Go back to Blogs](../Blogs.md){: .btn}
