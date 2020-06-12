@@ -43,4 +43,5 @@ To write to the file using cat
 $ cp file1 > file2
 ```
 To copy the content from file1 to file2. Note that the contents of file2 will be overwritten. If you want to append use `>>`
+
 [Go back to Blogs](../Blogs.md){: .btn}
