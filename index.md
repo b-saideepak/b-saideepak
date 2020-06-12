@@ -8,10 +8,10 @@ As a CS guy you might have to learn many tools like git, linux, programming, sim
 
 Check out the blogs section.
 
-[Look-Here](Bio.md) for a brief bio.
+[Look-Here](Bio.md){: .btn}
 
 [Projects](Project.md){: .btn}
 
-[Blogs](Blogs.md)
+[Blogs](Blogs.md){: .btn}
 
 <button name="button">Click me</button>
