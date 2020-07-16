@@ -69,3 +69,86 @@ You can add level 1 for instruction and data caches. In my case I only wanted to
 cache_level(p->Level)
 ```
 Note that you have to declare the `cache_level` variable in the corresponding header file (`base.hh` or `cache.hh`).
+
+## Adding a Pseudo Instruction
+Many a times, you might want to add an instruction to the ISA. Sometimes, if the functionality of the instruction is minimal it can be done using a pseudo instruction in gem5. Using a pseudo instruction is way simple compared to adding an instruction to ISA. Gem5 already has some reserved opcodes which the user can use. I took the help of this [link](http://gedare-csphd.blogspot.com/2013/02/add-pseudo-instruction-to-gem5.html) But the structure of m5 files now is different.
+
+1. Add the instruction in `src/arch/x86/isa/decoder/two_byte_opcodes.isa` 
+```bash
+0x56: mynewop({{
+    Rax = PseudoInst::mynewop(xc->tcBase(), Rdi, Rsi);
+    }}, IsNonSpeculative);
+```
+You have to do this using the m5reserved opcodes. In my case I have overridden m5reserved2.
+
+2. Add the instruction and definition in `src/sim/pseudo_inst.cc`
+In switch case:
+```bash
+case M5_MYNEWOP:
+m5_mynewop(tc, args[0], args[1]);
+break;
+```
+definition
+
+```bash
+uint64_t
+mynewop(ThreadContext *tc, uint64_t arg1, uint64_t arg2)
+{
+    if (!FullSystem) {
+        panicFsOnlyPseudoInst("mynewop");
+        return 0;
+    }
+
+    return arg1+arg2;
+}
+```
+
+3. Declare the function in `src/sim/pseudo_inst.hh` 
+```bash
+uint64_t mynewop(ThreadContext *tc, uint64_t arg1, uint64_t arg2);
+```
+
+4. Add the function declaration also in `include/gem5/m5ops.h`
+```bash
+uint64_t m5_mynewop(uint64_t arg1, uint64_t arg2);
+```
+5. Add the instruction in `util/m5/m5op_x86.S`
+```bash
+TWO_BYTE_OP(m5_mynewop, mynewop_func)
+```
+
+6. Add the function in `include/gem5/asm/generic/m5ops.h`
+```bash
+#define mynewop_func            0x56 // Reserved for user
+```
+and in `#define M5OP_FOREACH`
+```bash
+M5OP(m5_mynewop, M5_MYNEWOP)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
