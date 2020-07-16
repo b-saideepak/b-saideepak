@@ -124,7 +124,7 @@ TWO_BYTE_OP(m5_mynewop, mynewop_func)
 ```
 and in `#define M5OP_FOREACH`
 ```bash
-M5OP(m5_mynewop, M5_MYNEWOP)
+M5OP(m5_mynewop, M5_MYNEWOP, 0)
 ```
 7. Rebuild the gem5
 
