@@ -112,6 +112,7 @@ uint64_t mynewop(ThreadContext *tc, uint64_t arg1, uint64_t arg2);
 ```bash
 uint64_t m5_mynewop(uint64_t arg1, uint64_t arg2);
 ```
+
 5. Add the instruction in `util/m5/m5op_x86.S`
 ```bash
 TWO_BYTE_OP(m5_mynewop, mynewop_func)
@@ -124,6 +125,13 @@ TWO_BYTE_OP(m5_mynewop, mynewop_func)
 and in `#define M5OP_FOREACH`
 ```bash
 M5OP(m5_mynewop, M5_MYNEWOP)
+```
+7. Rebuild the gem5
+
+8. Include `include/gem5/m5ops.h` in your program and compile it using the command.
+```bash
+$ cd gem5
+$ gcc prog.c -I ../gem5/include/ -I ../gem5/include/gem5/ ../gem5/util/m5/m5op_x86.S -o prog
 ```
 
 
