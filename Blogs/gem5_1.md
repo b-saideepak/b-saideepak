@@ -37,3 +37,4 @@ This will automatically generate the header file `'debug/YourDebugFlagName.hh'` 
 #include "debug/YourDebugFlagName.hh"
 DPRINTF(YourDebugFlagName, "Debugging using my own debug flag\n");
 ```
+## Adding a Level Option
