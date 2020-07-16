@@ -18,6 +18,7 @@ Let us break the command and understand it part by part.
 * --cpu-type` denotes the type of CPU that you want to use. There are different types of CPU that you can choose from `AtomicSimpleCPU` `DerivO3CPU` etc. We will use `TimingSimpleCPU` for simplicity although you can change based on your requirement.
 * To use caches in your system you just have to mention them as an option. `--caches` and `--l2cache` include l1cache and l2cache in your system. You could see the following output if you have built gem5 correctly.
 * * *
+
 ```bash
 gem5 is copyrighted software; use the --copyright option for details.
 
