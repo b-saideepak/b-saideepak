@@ -50,3 +50,22 @@ This will automatically generate the header file `'debug/YourDebugFlagName.hh'` 
 DPRINTF(YourDebugFlagName, "Debugging using my own debug flag\n");
 ```
 ## Adding a Level Option
+Most of the times I wanted to make changes only to a particular cache say L1, L2. But the code for all the caches will be the same. So if you make changes to that, those will be applied to all the caches. It is better if you distinguish between caches using a level variable.
+
+1. All the parameters that you want your C++ file to have can be declared in the python script(in this case Cache.py). Add a parameter named `Level` in the script.
+```bash
+Level = Param.Int(0,"Denotes cache level")
+```
+0 is the initial value of the variable.
+
+2. You have to set the level variable for all the caches using `configs/common/Caches.py`. In this file, you can find all the caches that are being declared. In each cache that you want to assign a value. Add this option
+```bash
+Level = 1
+```
+You can add level 1 for instruction and data caches. In my case I only wanted to make changes to dcache, so I gave different values to dcache and icache.
+
+3. You have to receive this value in the constructor of the `Cache`(`base.cc` or `cache.cc`) in a variable using params. Here I am doing it in `base.cc` and as `cache.cc` inherits `base.cc` you can directly use it in `cache.cc` too.
+```bash
+cache_level(p->Level)
+```
+Note that you have to declare the `cache_level` variable in the corresponding header file (`base.hh` or `cache.hh`).
