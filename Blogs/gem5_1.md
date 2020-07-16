@@ -131,7 +131,7 @@ M5OP(m5_mynewop, M5_MYNEWOP)
 8. Include `include/gem5/m5ops.h` in your program and compile it using the command.
 ```bash
 $ cd gem5
-$ gcc prog.c -I ../gem5/include/ -I ../gem5/include/gem5/ ../gem5/util/m5/m5op_x86.S -o prog
+$ gcc /path/prog.c -I ../gem5/include/ -I ../gem5/include/gem5/ ../gem5/util/m5/m5op_x86.S -o prog
 ```
 
 
