@@ -32,7 +32,7 @@ Most of the times you will perform changes to gem5 and you want to check whether
 ```bash
 Debugflag('YourDebugFlagName')
 ```
-This will automatically generate the header file 'debug/YourDebugFlagName.hh' after you rebuid gem5. You have to include this header file in your code. A sample use is:
+This will automatically generate the header file `'debug/YourDebugFlagName.hh'` after you rebuild gem5. You have to include this header file in your code. A sample use is:
 ```bash
 #include "debug/YourDebugFlagName.hh"
 DPRINTF(YourDebugFlagName, "Debugging using my own debug flag\n");
