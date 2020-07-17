@@ -73,7 +73,7 @@ Note that you have to declare the `cache_level` variable in the corresponding he
 ## Adding a Pseudo Instruction
 Many a times, you might want to add an instruction to the ISA. Sometimes, if the functionality of the instruction is minimal it can be done using a pseudo instruction in gem5. Using a pseudo instruction is way simple compared to adding an instruction to ISA. Gem5 already has some reserved opcodes which the user can use. I took the help of this [link](http://gedare-csphd.blogspot.com/2013/02/add-pseudo-instruction-to-gem5.html) But the structure of m5 files now is different.
 
-1. Add the instruction in `src/arch/x86/isa/decoder/two_byte_opcodes.isa` 
+1. Add the instruction in `src/arch/x86/isa/decoder/two_byte_opcodes.isa`.
 ```bash
 0x56: mynewop({{
     Rax = PseudoInst::mynewop(xc->tcBase(), Rdi, Rsi);
@@ -81,7 +81,7 @@ Many a times, you might want to add an instruction to the ISA. Sometimes, if the
 ```
 You have to do this using the m5reserved opcodes. In my case I have overridden m5reserved2.
 
-2. Add the instruction and definition in `src/sim/pseudo_inst.cc`
+2. Add the instruction and definition in `src/sim/pseudo_inst.cc`.
 In switch case:
 ```bash
 case M5_MYNEWOP:
