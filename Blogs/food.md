@@ -6,4 +6,4 @@ Never I understood the real meaning behind this. More than understanding I shoul
 
 
   ### Food       Quantity      Calories
-1. Rice             20g          80
+1. Rice \t            20g          80
