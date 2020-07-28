@@ -11,7 +11,7 @@ Know the power of Linux.
 
 My first month with gem5
 
-## [Food](.Blogs/food.md)
+## [Food](/Blogs/food.md)
 
 
 
