@@ -3,7 +3,7 @@
 
 ![my-img](https://raw.githubusercontent.com/b-saideepak/b-saideepak.github.io/master/filename.png)
  
-I am [Saideepak Bejawada](http://www.cse.iitm.ac.in/profile.php?arg=MjE5NA==), masters student(2019-present) at Indian Institute of Technology Madras.
+Hi, I am a masters student(2019-present) at Indian Institute of Technology Madras.
 
 I work under the supervision of Prof. [Madhu Mutyam](http://www.cse.iitm.ac.in/~madhu/) [Dept.of Computer Science and Engineering](https://www.cse.iitm.ac.in/) [IITM](https://www.iitm.ac.in/)
 
